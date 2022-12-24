@@ -103,6 +103,20 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/workPlaceDetail', 
+    component: Layout,
+    // redirect: '/dashboard',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/workPlaceDetail/index'),
+        name: 'workPlaceDetail',
+        meta: { title: '工作台详情', icon: 'documentation', affix: true },
+        hidden:true
+      }
+    ]
+  },
   receiveRouter,
   customerRouter,
   distributeRouter,
@@ -122,7 +136,8 @@ export const constantRoutes = [
   setparamsRouter,
   setsystemRouter,
   qualitymanageRouter,
-  othercontentRouter,
+  othercontentRouter
+
   // {
   //   path: '/documentation',
   //   component: Layout,

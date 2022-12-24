@@ -17,8 +17,7 @@ const othercontentRouter = {
       component: () => import('@/views/othercontent/download'),
       name: 'download',
       meta: { title: '下载中心', noCache: true }
-    },
-    
+    }
 
   ]
 }
